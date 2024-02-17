@@ -1,6 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css?family=Outfit');
 
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    
+}
+a{
+    color: white !important;
+}
 
 /* HEADER */
 
@@ -49,4 +58,223 @@
 
     right: -10px;
     bottom: 0px;
+}
+
+/* HERO SECTION */
+
+.row>* {  
+    padding-right: calc(var(--bs-gutter-x) * 0);
+    padding-left: calc(var(--bs-gutter-x) * 0);   
+}
+.banner_wrapper .hero .background-clip{
+    position: relative; 
+    top: 0;
+    z-index: -1;
+}
+/* CONTENT */
+
+.content .bakri{
+    margin-top: 70px;
+    height: 75vh;
+    background-image: url('https://hogafilm.zedsa.co/cdn/images/bakari_color.jpg');
+    background-size:cover ;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:20px ;
+
+}
+
+
+
+/* MOVING HEADERS */
+
+.glitch-off .glitch {
+    display: none;
+  }
+
+  .glitch-replacement {
+    display: none;
+  }
+
+  .glitch-off .glitch-replacement {
+    display: block;
+  }
+
+  .glitch {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }
+
+  .glitch span {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: stack 340ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 1s ease infinite 1s alternate-reverse;
+  }
+
+  .glitch span:nth-child(odd) {
+    --glitch-translate: 20px;
+  }
+
+  .glitch span:nth-child(even) {
+    --glitch-translate: -20px;
+  }
+
+
+  @keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    }
+
+    ;
+
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+
+    100% {
+      text-shadow: none;
+    }
+  }
+
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+
+    4%,
+    100% {
+      text-shadow: none;
+      transform: none;
+    }
+  }
+
+  #wipe_passages span {
+    opacity: 0.1;
+  }
+
+
+
+
+
+.klll{
+    display:flex;
+    justify-content: start;
+    width: 100%;
+    font-size: 11rem;
+    font-weight: 800;
+    color: rgb(80, 80, 80);
+     font-family: Montserrat, sans-serif; 
+     translate: none; 
+     rotate: none; 
+     scale: none;
+    transform: translate3d(44.2959vw, 0px, 0px);
+}
+.kllr{
+    display:flex;
+    margin-top: -5.856rem ;
+    justify-content: center;
+    width: 100%;
+    margin-left: 110px;
+    font-size:11rem;
+    font-weight: 800;
+    color: rgb(80, 80, 80);
+    font-family: Montserrat, sans-serif; 
+    translate: none; 
+    rotate: none; 
+    scale: none;
+    transform: translate3d(-27.4749vw, 0px, 0px);
+}
+
+
+
+  /* PARA */
+
+
+  .stdo {
+    font-weight: 800;
+    font-size: 74px;
+  }
+
+
+  .para {
+    margin-right: 110px;
+    margin-top: -40px;
+    font-weight: 50;
+    margin-bottom: 46px;
+  }
+ .para{
+    display: flex;
+    justify-content: end;
+ }
+.para .font{
+    
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+
+/* Content2 */
+
+.content2{
+    background-image: url('https://www.hogafilms.com/cdn/images/bg/Polish_20230108_222410802.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+} 
+.content2 .row video{
+    max-height:407px ;
+    min-height: 290px;
+}
+
+.content3{
+    background-image: url('https://www.hogafilms.com/cdn/images/bg/mountains.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.content3 .row video{
+    max-height:407px ;
+    min-height: 290px;
+}
+.content4{
+    background-image: url('https://www.hogafilms.com/cdn/images/bg/1-1.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.content4 .row video{
+    max-height:407px ;
+    min-height: 290px;
 }
