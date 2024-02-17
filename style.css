@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css?family=Outfit');
+
+
+/* HEADER */
+
+/* 1 Navbar */
+.header-wrapper .navbar{
+    height: 6.55rem;
+}
+.header-wrapper .navbar a{
+    font-size: 1.236rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.header-wrapper .navbar .navbar-brand img{
+    height: 3rem;
+}
+
+.header-wrapper .navbar .top-right-cont{
+    position: absolute;
+    font-size: 0.832rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    top:0;
+    right: 9px;
+}
+.header-wrapper .navbar .top-right-cont .top-right-text1{
+    display: inline-block;
+    
+    position: relative;
+    top: 0.3rem;
+    right: -4.35rem;
+    
+    
+}
+.header-wrapper .navbar .top-right-cont .top-right-text2{
+    display: inline-block;
+    rotate: 90deg;
+    position: relative;
+    top: 3.24rem;
+    right: -1.564rem;
+    
+    
+}
+.flex1{
+    width: 5.345rem;
+    height: 15rem;
+    position: fixed;
+
+    right: -10px;
+    bottom: 0px;
+}
