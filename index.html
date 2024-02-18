@@ -1,230 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hogafilms -Sabhoga</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogafilms -sabhoga</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Outfit');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    
+}
+a{
+    color: white !important;
+}
+
+/* HEADER */
+
+/* 1 Navbar */
+.header-wrapper .navbar{
+    height: 6.55rem;
+}
+.header-wrapper .navbar a{
+    font-size: 1.236rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.header-wrapper .navbar .navbar-brand img{
+    height: 3rem;
+}
+
+.header-wrapper .navbar .top-right-cont{
+    position: absolute;
+    font-size: 0.832rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    top:0;
+    right: 9px;
+}
+.header-wrapper .navbar .top-right-cont .top-right-text1{
+    display: inline-block;
+    
+    position: relative;
+    top: 0.3rem;
+    right: -4.35rem;
+    
+    
+}
+.header-wrapper .navbar .top-right-cont .top-right-text2{
+    display: inline-block;
+    rotate: 90deg;
+    position: relative;
+    top: 3.24rem;
+    right: -1.564rem;
+    
+    
+}
+.flex1{
+    width: 5.345rem;
+    height: 15rem;
+    position: fixed;
+
+    right: -10px;
+    bottom: 0px;
+}
+
+    </style>
 </head>
-<body class="bg-black">
+<body class="bg-black overflow-x-hidden text-white" >
 
-
- <!-- Navbar -->
+     <!-- Navbar -->
  <header class="header-wrapper ">
-      <nav class="navbar navbar-expand-lg  sticky-top bg-black" >
-          <div class="container-fluid">              
-              <!-- toggle btn -->
-              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"  aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars fa-xl" style="color: #fcfcfc;"></i>
-              </button>
-              <!-- sidebar -->
-              <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                  
-                <div class="offcanvas-header bg-black justify-content-end ">
-                    <button type="button" class="btn-close btn-close-white mt-3 me-2 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-
+    <nav class="navbar navbar-expand-lg  sticky-top bg-black" >
+        <div class="container-fluid">              
+            <!-- toggle btn -->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"  aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars fa-xl" style="color: #fcfcfc;"></i>
+            </button>
+            <!-- sidebar -->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 
-                  <div class="offcanvas-body d-flex justify-content-start align-items-center flex-column flex-lg-row h-50 bg-black">
-                    
-                    <ul class="navbar-nav menu-navbar-nav justify-content-start align-items-center fs-6 flex-grow-1 pe-5 ">
-                        <li class="nav-item ms-4 mx-2">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">HOGA tv</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">HOGA eSchool</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">Work</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">Connect</a>
-                        </li>
-                    </ul>
-                  </div>
+              <div class="offcanvas-header bg-black justify-content-end ">
+                  <button type="button" class="btn-close btn-close-white mt-3 me-2 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
 
+              
+                <div class="offcanvas-body d-flex justify-content-start align-items-center flex-column flex-lg-row h-50 bg-black">
+                  
+                  <ul class="navbar-nav menu-navbar-nav justify-content-start align-items-center fs-6 flex-grow-1 pe-5 ">
+                      <li class="nav-item ms-4 mx-2">
+                          <a class="nav-link" href="#">Home</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                          <a class="nav-link" href="#">About</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                          <a class="nav-link" href="#">HOGA tv</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                          <a class="nav-link" href="#">HOGA eSchool</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                          <a class="nav-link" href="#">Work</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                          <a class="nav-link" href="#">Connect</a>
+                      </li>
+                  </ul>
                 </div>
-                <span>
-                    <a class="navbar-brand" href="#home">
-                        <img class="logo" src="https://hogafilm.zedsa.co/cdn/logos/HOGA_White.png" alt="Name logo">
-                    </a>
-                 </span>
-                 <div class="top-right-cont h-100">
-                    <span class="top-right-text1 text-white">
-                        FLIM &
-                    </span> 
-                    <span class="top-right-text2 text-white">
-                        ART STUDIO
-                    </span> 
-                    
-                 </div>  
-                 <div class=" flex1 flex-col items-end z-50 gap-6 p-4 fill-white">
 
-                    <a class="link h-6 w-6 " target="blank" href="https://www.instagram.com/hogafilms_india/"><svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
-        
-                        <title>Instagram</title>
-        
-                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
-        
-                      </svg></a>
-        
-                    <a class="link h-6 w-6" target="blank" href="https://www.youtube.com/@HOGAFilms"><svg fill="#fff" role="img" viewBox="0 0 38 38 " xmlns="http://www.w3.org/2000/svg">
-        
-                        <title>YouTube</title>
-        
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-        
-                      </svg></a>
-        
-                    <a class="link h-6 w-6" target="blank" href="https://vimeo.com/hogafilms"><svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
-        
-                        <title>Vimeo</title>
-        
-                        <path d="M23.9765 6.4168c-.105 2.338-1.739 5.5429-4.894 9.6088-3.2679 4.247-6.0258 6.3699-8.2898 6.3699-1.409 0-2.578-1.294-3.553-3.881l-1.9179-7.1138c-.719-2.584-1.488-3.878-2.312-3.878-.179 0-.806.378-1.8809 1.132l-1.129-1.457a315.06 315.06 0 003.501-3.1279c1.579-1.368 2.765-2.085 3.5539-2.159 1.867-.18 3.016 1.1 3.407 3.838.465 2.953.789 4.789.971 5.5069.5389 2.45 1.1309 3.674 1.7759 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.8679 3.434-5.7568 6.7619-5.6368 2.4729.06 3.6279 1.664 3.4929 4.7969z"></path>
-        
-                      </svg>
-        
-                    </a>
-        
-                    <a class="link h-6 w-6" target="blank" href="https://wa.me/919967046885"><svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
-        
-                        <title>WhatsApp</title>
-        
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-        
-                      </svg>
-        
-                    </a>
-        
-                    <a class="link h-6 w-6" target="blank" href="https://www.linkedin.com">
-        
-                      <svg fill="#fff" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 712">
-        
-                        <title>Linkedin</title>
-        
-                        <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
-        
-                      </svg>
-        
-                    </a>
-        
-                  </div> 
-          </div>
-         
-      </nav>
+              </div>
+              <span>
+                  <a class="navbar-brand" href="#home">
+                      <img class="logo mr-6 mt-4" src="https://hogafilm.zedsa.co/cdn/logos/HOGA_White.png" alt="Name logo">
+                  </a>
+               </span>
+               <div class="top-right-cont h-100 ">
+                  <span class="top-right-text1 text-white ">
+                      FLIM &
+                  </span> 
+                  <span class="top-right-text2 text-white">
+                      ART STUDIO
+                  </span> 
+                  
+               </div>  
+               <div class=" flex1 flex-col items-end z-50 gap-6 p-4 fill-white">
+
+                  <a class="link h-6 w-6 " target="blank" href="https://www.instagram.com/hogafilms_india/"><svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
       
+                      <title>Instagram</title>
+      
+                      <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
+      
+                    </svg></a>
+      
+                  <a class="link h-6 w-6" target="blank" href="https://www.youtube.com/@HOGAFilms"><svg fill="#fff" role="img" viewBox="0 0 38 38 " xmlns="http://www.w3.org/2000/svg">
+      
+                      <title>YouTube</title>
+      
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+      
+                    </svg></a>
+      
+                  <a class="link h-6 w-6" target="blank" href="https://vimeo.com/hogafilms"><svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+      
+                      <title>Vimeo</title>
+      
+                      <path d="M23.9765 6.4168c-.105 2.338-1.739 5.5429-4.894 9.6088-3.2679 4.247-6.0258 6.3699-8.2898 6.3699-1.409 0-2.578-1.294-3.553-3.881l-1.9179-7.1138c-.719-2.584-1.488-3.878-2.312-3.878-.179 0-.806.378-1.8809 1.132l-1.129-1.457a315.06 315.06 0 003.501-3.1279c1.579-1.368 2.765-2.085 3.5539-2.159 1.867-.18 3.016 1.1 3.407 3.838.465 2.953.789 4.789.971 5.5069.5389 2.45 1.1309 3.674 1.7759 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.8679 3.434-5.7568 6.7619-5.6368 2.4729.06 3.6279 1.664 3.4929 4.7969z"></path>
+      
+                    </svg>
+      
+                  </a>
+      
+                  <a class="link h-6 w-6" target="blank" href="https://wa.me/919967046885"><svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+      
+                      <title>WhatsApp</title>
+      
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+      
+                    </svg>
+      
+                  </a>
+      
+                  <a class="link h-6 w-6" target="blank" href="https://www.linkedin.com">
+      
+                    <svg fill="#fff" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 712">
+      
+                      <title>Linkedin</title>
+      
+                      <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+      
+                    </svg>
+      
+                  </a>
+      
+                </div> 
+        </div>
+       
+    </nav>
+    
  </header>
- 
- <!-- Bannner -->
 
- <section class="banner_wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <video autoplay muted loop plays-inline class="background-clip" width="100%">
-                    <source src="https://hogafilm.zedsa.co/cdn/videos/home_banner.mp4" type="video/mp4">
-                </video>
-            </div>    
-        </div>
-    </div>
- </section>      
-
- <section class="content">
-    <div class="container" >
-        <div class="row">
-            <div class="col-md-12 ">
-                <div class="bakri" >
-                    <video autoplay muted loop plays-inline class="video" width="30%">
-                        <source src="https://hogafilm.zedsa.co/cdn/videos/tree.mp4">
-                    </video>
+    <!-- BANNER SECTION -->
+    <section>
+        <div class="container-fluid align-middle ">
+            <div class="row">
+                <div class="sm:col-span-12 ">
+                    <div class=" h-screen">
+                        <video autoplay muted loop plays-inline class="w-full h-full object-cover object-center absolute top-10 left-0 " >
+                            <source src="https://hogafilm.zedsa.co/cdn/videos/home_banner.mp4" type="video/mp4">
+                        </video>
+                    </div>    
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CONTENT 1  -->
+    <section>
+        <div class="container">
+            <div class="row ">
+                <div class="col-12  p-10">
+                    <div class="bg-[url('https://hogafilm.zedsa.co/cdn/images/bakari_color.jpg')] bg-cover bg-no-repeat bg-center sm:v w-full flex justify-center items-center lg:h-[90vh] h-[30vh] ">
+                        <div class="  flex justify-center items-center">
+                            <video src="https://hogafilm.zedsa.co/cdn/videos/tree.mp4" autoplay muted loop plays-inline class="h-24 lg:h-64 " height="10px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <!-- content2 -->
+        <style>
+            
+.glitch-off .glitch {
+    display: none;
+  }
+
+  .glitch-replacement {
+    display: none;
+  }
+
+  .glitch-off .glitch-replacement {
+    display: block;
+  }
+
+  .glitch {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }
+
+  .glitch span {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: stack 340ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 1s ease infinite 1s alternate-reverse;
+  }
+
+  .glitch span:nth-child(odd) {
+    --glitch-translate: 20px;
+  }
+
+  .glitch span:nth-child(even) {
+    --glitch-translate: -20px;
+  }
+
+
+  @keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    }
+
+    ;
+
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+
+    100% {
+      text-shadow: none;
+    }
+  }
+
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+
+    4%,
+    100% {
+      text-shadow: none;
+      transform: none;
+    }
+  }
+
+  #wipe_passages span {
+    opacity: 0.1;
+  }
+
+        </style>
+        <div id="llast" class="flex flex-col w-full justify-center mt-32 mb-8 overflow-hidden" style="color: #505050;  ">
+
+            <p id="flyRight2" class="lg:text-[9rem] text-[4rem] font-extrabold -ms-[50vw] lg:-ms-[20vw]" style="translate: none; rotate: none; scale: none; transform: translate3d(66.6898vw, 0px, 0px);">Postcards</p>
+            <p class=" kllr lg:text-[9rem] text-[4rem] font-extrabold -ms-[20vw]" style="translate: none; rotate: none; scale: none; transform: translate3d(20.6898vw, 0px, 0px);" id="flyLeft" >
+                <span class="glitch" style="--stacks: 3;">
+                  <span style="--index: 0;" class="ghost_text_home">Creators</span>
+                  <span style="--index: 1;" class="ghost_text_home">Creators</span>
+                  <span style="--index: 2;" class="ghost_text_home">Creators</span>
+                </span>
+              </p>
         </div>    
-    </div>
+        <style>
+            
 
- </section>
+                    .stdo {
 
- <section>
+            font-weight: 800;
+
+            font-size: 74px;
+
+            }
+
+
+
+            /* #flyRight {
+
+            font-weight: 800;
+
+            font-size: 86px;
+
+            margin-bottom: 1rem;
+
+            } */
+
+
+
+            .para {
+
+            margin-right: 110px;
+
+            margin-top: -40px;
+
+            font-weight: 50;
+
+            margin-bottom: 46px;
+
+            }
+
+
+        </style>  
+        <div class="para flex flex-row self-end lg:text-4xl sm:text-3xl lg:px-40 sm:px-0 p-5 lg:mb-40 mb-10" style="font-family: 'Outfit', sans-serif">
+
+            <div class="self-endd text-left max-w-xl flex flex-col lg:gap-20 md:gap-15 gap-7" id="wipe_passages" style="font-family: 'Outfit', sans-serif">
+    
+              <p style="font-family: 'Outfit', sans-serif"><span style="opacity: 1;">A</span>
+    
+                <span style="opacity: 1;">s</span><span style="opacity: 1;">t</span><span style="opacity: 1;">u</span><span style="opacity: 1;">d</span><span style="opacity: 1;">i</span><span style="opacity: 1;">o</span><span style="opacity: 1;">
+    
+                </span><span style="opacity: 1;">w</span><span style="opacity: 1;">i</span><span style="opacity: 1;">t</span><span style="opacity: 1;">h</span><span style="opacity: 1;">
+    
+                </span><span style="opacity: 1;">t</span><span style="opacity: 1;">h</span><span style="opacity: 1;">e</span><span style="opacity: 1;">
+    
+                </span><span style="opacity: 1;">soul </span> <span style="opacity: 1;">of a </span> <span style="opacity: 1;">trav</span><span style="opacity: 1;">el</span><span style="opacity: 1;">er</span>
+    
+                <span style="opacity: 1;">and</span> <span style="opacity: 1;">skills</span><span style="opacity: 1;">
+    
+                </span><span style="opacity: 1;">o</span><span style="opacity: 1;">f</span><span style="opacity: 1;"> </span><span style="opacity: 1;">a</span><span style="opacity: 1;">
+    
+                </span><span style="opacity: 1;">capti</span><span style="opacity: 1;">vating</span> <span style="opacity: 1;">story</span><span style="opacity: 1;">teller.</span>
+    
+              </p>
+    
+              <p style="font-family: 'Outfit', sans-serif"><span style="font-size: 130%; font-weight: 400; opacity: 0.9999;">HOGA</span><span style="opacity: 0.9989;"></span><span style="opacity: 0.997;">,</span><span style="opacity: 0.9941;">
+    
+                </span><span style="opacity: 0.9903;">e</span><span style="opacity: 0.9854;">c</span><span style="opacity: 0.9796;">h</span><span style="opacity: 0.9728;">o</span><span style="opacity: 0.9651;">i</span><span style="opacity: 0.9563;">n</span><span style="opacity: 0.9466;">g</span><span style="opacity: 0.9359;">
+    
+                </span><span style="opacity: 0.9243;">t</span><span style="opacity: 0.9116;">h</span><span style="opacity: 0.898;">e</span><span style="opacity: 0.8835;">
+    
+                </span><span style="opacity: 0.8679;">H</span><span style="opacity: 0.8514;">i</span><span style="opacity: 0.8339;">n</span><span style="opacity: 0.8154;">d</span><span style="opacity: 0.796;">i</span><span style="opacity: 0.7756;">
+    
+                </span><span style="opacity: 0.7542;">p</span><span style="opacity: 0.7318;">r</span><span style="opacity: 0.7085;">o</span><span style="opacity: 0.6842;">m</span><span style="opacity: 0.6589;">i</span><span style="opacity: 0.6326;">s</span><span style="opacity: 0.6054;">e</span><span style="opacity: 0.5772;">
+    
+                </span><span style="opacity: 0.548;">'</span><span style="opacity: 0.5178;"> </span><span style="opacity: 0.4867;"> it will happen, ' is
+    
+                  our affirmation</span><span style="opacity: 0.4546;">,</span><span style="opacity: 0.4216;">
+    
+                </span><span style="opacity: 0.3875;">w</span><span style="opacity: 0.3525;">o</span><span style="opacity: 0.3165;">v</span><span style="opacity: 0.2795;">e</span><span style="opacity: 0.2416;">n</span><span style="opacity: 0.2027;">
+    
+                </span><span style="opacity: 0.1628;">t</span><span style="opacity: 0.1219;">o</span><span style="opacity: 0.1;">
+    
+                </span><span style="opacity: 0.1;">b</span><span style="opacity: 0.1;">r</span><span style="opacity: 0.1;">e</span><span style="opacity: 0.1;">a</span><span style="opacity: 0.1;">t</span><span style="opacity: 0.1;">h</span><span style="opacity: 0.1;">e</span><span style="opacity: 0.1;">
+    
+                </span><span style="opacity: 0.1;">l</span><span style="opacity: 0.1;">i</span><span style="opacity: 0.1;">f</span><span style="opacity: 0.1;">e</span><span style="opacity: 0.1;">
+    
+                </span><span style="opacity: 0.1;">i</span><span style="opacity: 0.1;">n</span><span style="opacity: 0.1;">t</span><span style="opacity: 0.1;">o</span><span style="opacity: 0.1;"> our imaginations</span><span style="opacity: 0.1;">
+    
+                </span><span style="opacity: 0.1;">a</span><span style="opacity: 0.1;">n</span><span style="opacity: 0.1;">d</span><span style="opacity: 0.1;">
+    
+                </span><span style="opacity: 0.1;">m</span><span style="opacity: 0.1;">a</span><span style="opacity: 0.1;">k</span><span style="opacity: 0.1;">e</span><span style="opacity: 0.1;">
+    
+                </span><span>i</span><span>t</span><span> </span><span>a</span><span>
+    
+                </span><span>c</span><span>i</span><span>n</span><span>e</span><span>m</span><span>a</span><span>t</span><span>i</span><span>c</span><span>
+    
+                </span><span>r</span><span>e</span><span>a</span><span>l</span><span>i</span><span>t</span><span>y</span><span>
+    
+                </span><span>.</span></p>
+    
+            </div>
+    
+        </div>
+        
+        <!-- CONTENT 3 -->
+        <div class=" container-fluid bg-[url('https://www.hogafilms.com/cdn/images/bg/Polish_20230108_222410802.jpg')] min-h-[500px] bg-cover bg-fixed bg-no-repeat bg-center">
+            
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex justify-content-center mt-5 pt-5">
+                        <video autoplay loop controls muted class="  lg:h-[28rem] my-[2.8rem]" src="https://www.hogafilms.com/cdn/videos/dhoni ad.mp4"></video>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center mb-5 pb-5">
+                        <video autoplay loop controls muted class="  lg:h-[28rem] my-[2.8rem]" src="https://www.hogafilms.com/cdn/videos/The Weaver of Hope Founder's Film.mp4"></video>
+                    </div>
+                </div>
+            
+         </div>
+
+         <!-- CONTENT 4 -->
+         <div class=" container-fluid bg-[url('https://www.hogafilms.com/cdn/images/bg/mountains.jpg')] min-h-[500px] bg-cover bg-fixed bg-no-repeat bg-center">
+            
+            <div class="row justify-content-center">
+                <div class="col-12 d-flex justify-content-center mt-5 pt-5">
+                    <video autoplay loop controls muted class="  lg:h-[28rem] my-[2.8rem]" src="https://www.hogafilms.com/cdn/videos/Elevate Podcast Season 2.mp4"></video>
+                </div>
+                <div class="col-12 d-flex justify-content-center mb-5 pb-5">
+                    <video autoplay loop controls muted class="  lg:h-[28rem] my-[2.8rem]" src="https://www.hogafilms.com/cdn/videos/The%20Great%20Indian%20Train%20Journey%20Shillong%20Chamber%20Choir%20%5Bv9sO0EqBr9Y%5D.mp4"></video>
+                </div>
+            </div>
+        
+        </div>
+         <!-- CONTENT 5 -->
+
+         <div class=" container-fluid bg-[url('https://www.hogafilms.com/cdn/images/bg/1-1.jpg')] min-h-[500px] bg-cover bg-fixed bg-no-repeat bg-center">
+            
+            <div class="row justify-content-center">
+                <div class="col-12 d-flex justify-content-center mt-5 pt-5">
+                    <video autoplay loop controls muted class="  lg:h-[28rem] my-[2.8rem]" src="https://www.hogafilms.com/cdn/videos/Uljhe Hue - Official Trailer.mp4"></video>
+                </div>
+                <div class="col-12 d-flex justify-content-center mb-5 pb-0">
+                    <video autoplay loop controls muted class="  lg:h-[28rem] my-[2.8rem]" src="https://www.hogafilms.com/cdn/videos/Feast of the Thar.mp4"></video>
+                </div>
+                <div class="col-12 flex justify-center pb-10">
+                    <a href="" class="btn  w-32 rounded-none border-2 border-white outline-offset-1  bg-black">ALL WORK</a>
+                </div>
+            </div>
+
+
+        
+        </div>
+        <div id="llast" class="flex flex-col w-full justify-center mt-32 mb-8 overflow-hidden" style="color: #505050;  ">
+
+            <p id="flyRight2" class="lg:text-[9rem] text-[4rem] font-extrabold -ms-[30vw] lg:-ms-[20vw]" style="translate: none; rotate: none; scale: none; transform: translate3d(33.6898vw, 0px, 0px);">Postcards</p>
+    
+            <p id="flyLeft2" class="lg:text-[2rem] text-[1.5rem] font-semibold ms-[80vw]" style="font-family: Outfit, sans-serif; translate: none; rotate: none; scale: none; transform: translate3d(-22.0595vw, 0px, 0px);">from
+    
+              <span style="font-size:52px; font-family:'Outfit', sans-serif;">HOGA</span></p>
+    
+          </div>
+
+          
+    </section>
+        
   
-      <div class=" mx-auto flex flex-col text-center w-screen overflow-hidden" id="creative_block">
-        <p class="klll" id="flyRight" >Curious</p>
-        <br>
-        <p class=" kllr" id="flyLeft" >
-          <span class="glitch" style="--stacks: 3;">
-            <span style="--index: 0;" class="ghost_text_home">Creators</span>
-            <span style="--index: 1;" class="ghost_text_home">Creators</span>
-            <span style="--index: 2;" class="ghost_text_home">Creators</span>
-          </span>
-        </p>
-      </div>
-
-     <div class="para">
-        <p class="font text-light">
-            A studio with the soul of a traveler <br>
-            and skills of a captivating storyteller.<br>
-            <br>
-            HOGA, echoing the Hindi<br>
-            promise ' it will happen, ' is<br>
-            our affirmation, woven to<br>
-            breathe life into our<br>
-            <br>
-            imaginations and make it<br>
-            a cinematic reality .
-        </p>
-     </div>
-
-     <div class="bg_img content2">
-        <div class="container mx-5 bg-transparent">
-            <div class="row justify-content-center">
-                <div class="col-12 d-flex justify-content-center mt-5 pt-5">
-                    <video autoplay loop muted class="my-5 pt-5 " src="https://www.hogafilms.com/cdn/videos/dhoni ad.mp4"></video>
-                </div>
-                <div class="col-12 d-flex justify-content-center mb-5 pb-5">
-                    <video autoplay loop muted class="my-5 pt-5" src="https://www.hogafilms.com/cdn/videos/The Weaver of Hope Founder's Film.mp4"></video>
-                </div>
-            </div>
-        </div>
-     </div>
-     <div class="bg_img content3">
-        <div class="container mx-5 bg-transparent">
-            <div class="row justify-content-center">
-                <div class="col-12 d-flex justify-content-center mt-5 pt-5">
-                    <video autoplay loop muted class="my-5 pt-5 " src="https://www.hogafilms.com/cdn/videos/Elevate Podcast Season 2.mp4"></video>
-                </div>
-                <div class="col-12 d-flex justify-content-center mb-5 pb-5">
-                    <video autoplay loop muted class="my-5 pt-5" src="https://www.hogafilms.com/cdn/videos/The%20Great%20Indian%20Train%20Journey%20Shillong%20Chamber%20Choir%20%5Bv9sO0EqBr9Y%5D.mp4"></video>
-                </div>
-            </div>
-        </div>
-     </div>
-     <div class="bg_img content4">
-        <div class="container mx-5 bg-transparent">
-            <div class="row justify-content-center">
-                <div class="col-12 d-flex justify-content-center mt-5 pt-5">
-                    <video autoplay loop muted class="my-5  pt-5" src="https://www.hogafilms.com/cdn/videos/Uljhe Hue - Official Trailer.mp4"></video>
-                </div>
-                <div class="col-12 d-flex justify-content-center mb-5 pb-5">
-                    <video autoplay loop muted class="my-5 pt-5" src="https://www.hogafilms.com/cdn/videos/Feast of the Thar.mp4"></video>
-                </div>
-            </div>
-        </div>
-     </div>
- </section>
-
-<!-- Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
+    <!-- BOOTSRAP SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
-
