@@ -1,3 +1,40 @@
+  
+  // PRODUCER BLOCK ACTIVE
+  let items = document.querySelectorAll('.producer-block');
+        
+  items.forEach(item => item.addEventListener('click', function () { handleHover(this, items) }))
+
+  function handleHover(el, objects) {
+
+    items.forEach(item => {
+
+      item.classList.remove('active')
+
+      item.classList.add('producer-block')
+
+    })
+
+    el.classList.add('active')
+
+  }
+  
+  // READ MORE BUTTON
+   $('.read-more-content').addClass('hide')
+   $('.read-more-show, .read-more-hide').removeClass('hide')
+   
+   // Set up the toggle effect:
+   $('.read-more-show').on('click', function(e) {
+     $(this).next('.read-more-content').removeClass('hide');
+     $(this).addClass('hide');
+     e.preventDefault();
+   });
+   
+   $('.read-more-hide').on('click', function(e) {
+     $(this).parent('.read-more-content').addClass('hide');
+     var moreid=$(this).attr("more-id");
+     $('.read-more-show#'+moreid).removeClass('hide');
+     e.preventDefault();
+   });
 // IFTTT Slottt Machine by Jen Hamon
 // jen@ifttt.com
 // github.com/jhamon
