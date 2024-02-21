@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogafilms - Sabhoga</title>
+
+	<link rel="icon" type="image/x-icon" href="HOGA - H icon.png">
+
+  <!-- css file -->
+  <link rel="stylesheet" href="css/about.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- icon css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!-- google font Montserrat  -->
+  <link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;300;400;500;600;700;800&display=swap"
+  rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
+  <style>
+
+    body{
+      background-color: black;
+    }
+
+    nav{
+        background-color: black;
+    }
+
+    nav .container-fluid .row ul li {
+      list-style: none;
+      display: inline;
+      font-size: 19px;
+    }
+
+    nav .container-fluid .row ul li>a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      padding-inline: 12px;
+    }
+
+    #navp {
+      padding: 40px 15px 40px 32px !important;
+      margin: 0;
+      padding-left: 0;
+    }
+
+    #h_hgt {
+      height: 110px;
+    }
+
+    #mbhide ul li:last-child {
+      padding-right: 0;
+    }
+
+    .sidepanel {
+      width: 0;
+      position: fixed;
+      z-index: 30;
+      height: 1200px;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidepanel a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidepanel a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidepanel .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+    }
+
+    .openbtn {
+      font-size: 36px;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      padding: 10px 0px;
+      border: none;
+    }
+
+    .openbtn:hover {
+      background-color: black;
+    }
+
+    .navbar-start {
+      margin-left: 21px;
+    }
+
+    .navbar {
+      padding-top: 31px;
+      padding-bottom: 31px;
+      min-width: 100px;
+    }
+
+    .menu-horizontal li {
+      list-style: none;
+      display: inline;
+      padding: 10px 15.3px 10px 18px;
+    }
+
+    .menu-horizontal li a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 19px;
+      padding: 0;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90%;
+      margin-top: 33px;
+      margin-right: 22px;
+    }
+
+    .and-title {
+      margin-right: 12px;
+    }
+
+    .rotate-90 {
+      /* margin-right: -22px; */
+      /* margin-top: 45px; */
+      margin-right: -21px;
+      margin-top: 52px;
+    }
+
+    .fixed-social {
+      gap: 1.5rem !important;
+      padding: 1.5rem !important;
+    }
+  </style>
+</head>
+<body class="bg-black overflow-x-hidden">
+    <!-- Navbar Start -->
+    <nav>
+        <div class="container-fluid text-white" id="h_hgt">
+          <div class="row">
+            <div class="col-sm-6 col-md-10 text-left mbhide" id="navp">
+              <div class="text-left" id="mbhide">
+                <ul id="ul" class="m-0">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="views/hogatv/index.html">HOGA tv</a></li>
+                  <li><a href="eschool2.html">HOGA eschool</a></li>
+                  <li><a href="work.html">Work</a></li>
+                  <li><a href="views/contact/index.html">Connect</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2 text-right">
+
+              <!-- mobile icon  -->
+              <div class="mylinks" style="float: left;" id="icon_mob">
+                <a class="openbtn" onclick="openNav()"><i class="bi bi-list"></i></a>
+              </div>
+              <div style="float: right;">
+                <img class="logo" src="assets/img/HOGA_White.png" alt="logo" />
+              </div>
+              <div class="text-white fixed top-2 right-2 flex flex-col items-end z-50"
+                style="font-family:'Outfit', sans-serif;font-weight: 100" id="corner_cap">
+                <span class="films-title"
+                  style="font-size:15px; font-family: 'Outfit', sans-serif;font-weight: 300;position: absolute; top: 2px; margin-left: -30px; ">
+                  FILMS
+                  <span class="and-title"
+                    style="font-size:15px; font-family: 'Outfit', sans-serif;font-weight: 300;">&amp;</span>
+                </span>
+                <span class="rotate-90" style="font-size:13px; font-family: 'Outfit', sans-serif;font-weight: 300;">ART
+                  STUDIO</span>
+              </div>
+            
+              <!-- FIXED ICONS START -->
+              <div style="gap: 7px;" class="fixed bottom-0 right-0 flex flex-col items-end z-50 ms-10 p-10 fill-white">
+                  <a class="link h-6 w-6" target="blank" href="https://www.instagram.com/hogafilms_india/">
+                    <svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+                      <title>Instagram</title>
+                      <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
+                    </svg>
+                  </a>
+                  <a class="link h-6 w-6" target="blank" href="https://www.youtube.com/@HOGAFilms">
+                    <svg fill="#fff" role="img" viewBox="0 0 38 38 " xmlns="http://www.w3.org/2000/svg">
+                      <title>YouTube</title>
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                    </svg>
+                  </a>
+                  <a class="link h-6 w-6" target="blank" href="https://vimeo.com/hogafilms">
+                    <svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+                      <title>Vimeo</title>
+                      <path d="M23.9765 6.4168c-.105 2.338-1.739 5.5429-4.894 9.6088-3.2679 4.247-6.0258 6.3699-8.2898 6.3699-1.409 0-2.578-1.294-3.553-3.881l-1.9179-7.1138c-.719-2.584-1.488-3.878-2.312-3.878-.179 0-.806.378-1.8809 1.132l-1.129-1.457a315.06 315.06 0 003.501-3.1279c1.579-1.368 2.765-2.085 3.5539-2.159 1.867-.18 3.016 1.1 3.407 3.838.465 2.953.789 4.789.971 5.5069.5389 2.45 1.1309 3.674 1.7759 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.8679 3.434-5.7568 6.7619-5.6368 2.4729.06 3.6279 1.664 3.4929 4.7969z"></path>
+                    </svg>
+                  </a>
+                  <a class="link h-6 w-6" target="blank" href="https://wa.me/919967046885">
+                    <svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+                      <title>WhatsApp</title>
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+                    </svg>
+                  </a>
+                  <a class="link h-6 w-6" target="blank" href="https://www.linkedin.com">
+                    <svg fill="#fff" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 712">
+                      <title>Linkedin</title>
+                      <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                    </svg>
+                  </a>
+              </div>
+              <!-- FIXED ICONS END -->
+            </div>
+          </div>
+        </div>
+    
+    </nav>
+    <!-- NAVbar javascript -->
+    <script>
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "250px";
+        }
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0px";
+        }
+    </script> 
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> × </a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="views/hogatv/index.html">HOGA tv</a>
+        <a href="eschool2.html">HOGA eschool</a>
+        <a href="work/work.html">Work</a>
+        <a href="views/contact/index.html">Connect</a>
+    </div>
+    <!-- Navbar END -->
+    
+      <!-- SECTION 1 START -->
+       <section class="mt-3" data-aos="fade-up" data-aos-duration="3000">
+          <div class="container">
+            <div class="row mt-5">
+              <!-- front video START -->
+              <div class="col-lg-9 order-lg-2 order-1">
+                  <div class="about-vid p-2">
+                    <video autoplay playsinline loop muted src="video/behind_the_scene.mp4">
+                    </video>
+                  </div>
+              </div>
+              <!-- front video END -->
+
+              <!-- Our Story Text Start -->
+              <div class="col-lg-3 order-lg-1 order-2" data-aos="fade-up" data-aos-duration="3000">
+                  <div class="  text-left relative" >
+                      <h1 class="lg:mt-[21rem] mt-[-5rem] heading-text" >
+                        <span class=" lg:ms-[-1.35rem] md:ms-[0.rem] lg:text-[9rem] text-[5rem] font-extrabold">
+                          OUR
+                        </span>
+                        <br>
+                        <span class="lg:text-[9rem] lg:mt-0 text-[6rem] font-extrabold" style="margin-top: -50px;">
+                          STORY
+                        </span>
+                      </h1>
+                  </div>
+              </div>
+              <!-- Our Story Text END -->
+
+              <!-- About Start -->
+              <div class="col-12 order-3">
+                <div class="container flex justify-end">
+                  <div class="main">                
+                    <!-- Begin read more component -->
+                    <div class="read-more mb-12" style="--line-clamp: 25">
+                      <input id="read-more-checkbox" type="checkbox" class="read-more__checkbox" aria-hidden="true">
+                      <p class="read-more__text mb-2 text-white text-[21.12px]" align="justify">
+                        <span> 
+                          Born out of a labour of love and a dedication to creative diligence, HOGA Films came into being
+                          in Jaipur,2018, with 2021 marking
+                          a pivotal year in which we introduced our second office in Bombay. What kickstarted as a small media
+                          house with
+                          just four members, has since evolved into a dynamaic group of creative minds with a core collective vision.
+                          <br>
+                          <br>
+                        </span>
+                        <span>
+                          With a foundation built with accredited individual achievements, our founders have worked with
+                          acclaimed filmmakers,international films
+                          festivals,a documentory feature in Incredible India, platforms such as Netflix, 
+                          Amazon, BBC India, along with being invited as a speaker for
+                          esteemed brands such as TEDx, Google talks, Columbia and Qatar Foundation. Together, 
+                          our goal is to create narratives through cross-cultural
+                          storytelling, and breaking boundaries with the universal language of creativity.
+                        </span>
+                        <br>
+                        <br>
+                        <span>
+                          While documentary films and live events marked our earlier projects, we remained undeterred by the
+                          challenges of the COVID-19 pandemic, through which we
+                          launched a sister concern brand, Lockdown Shorts Studio. The latter was a culmination of films
+                          created with the global limitation of not being able to set
+                          foot outside our homes an achievement that brought fulfilment on both a human, and creatively
+                          humbling level.
+                        </span>
+                        <br>
+                        <br>
+                        <span>
+                          Over 350 talents from across the globe came together for the production of our feature length
+                          anthology 'Love in the Time of Corona' (IMDb rating - 9.2/10).-+25
+                          shorts films today, we have made over 30 short films under Lockdown Shorts Studio, in addition to
+                          producong third-party short films.
+                        </span>
+                        <br>
+                        <br>
+                        <span>
+                          Along with the challenges of production during the pandemic,securing a platform to show-case our
+                          work posed an even bigger challenge. Post ten months
+                          of perseverance,the fruits of our labour transpired in the form of a contarct with Disney+Hotstar,
+                          our entry into the OTT World which received recognition
+                          from leading news agencies. Under the banner of Lockdown Shorts Studio, we have since produced the
+                          trending 'Ishq Express'(IMDb rating - 7.7/10) and 'Uljhey Hyue'
+                          (IMDb rating 8.1/10) for Amazon's Mini TV. The appreciation we garnered, encouraged us to establish
+                          a content bank, beginning with 'PROVIDER' a six-part we series.
+                        </span>        
+                        <br>
+                        <br>
+                        <span>
+                          Throughout the span of three years, we are proud to have esrablished a niche in documentaries brand film, human
+                          stories, and advertisement outside of the
+                          OTT domain.
+                        </span>
+                        <br>
+                        <br>
+                      </p>
+                      <label for="read-more-checkbox" class="read-more__label text-blue-900" data-read-more="Read more" data-read-less="See less" aria-hidden="true"></label>
+                    </div>
+                    <!-- End read more component -->
+
+                    <!-- Start read more CSS -->
+                    <style>
+                          .main {
+                            width: 100%;
+                            max-width: 40rem;
+                            display: flex;
+                            flex-grow: 1;
+                            flex-direction: column;
+                            align-items: start;
+                            padding: 1rem;
+                          }
+
+                          .card {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            max-width: 25rem;
+                            padding: 1.5rem;
+                            border: 1px solid #e7e7e7;
+                          }
+
+                          .mb-2 {
+                            margin-bottom: 0.5rem;
+                          }
+
+                          .mb-4 {
+                            margin-bottom: 1rem;
+                          }
+
+                          .mb-8 {
+                            margin-bottom: 2rem;
+                          }
+
+                          .mb-12 {
+                            margin-bottom: 3rem;
+                          }
+
+                          /* Now, onto the styling of the read more component */
+
+                          .read-more {
+                            /* You can update this variable directly in the html by adding a style property to the .read-more element */
+                            --line-clamp: 3;
+
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                          }
+
+                          .read-more__text {
+                            display: -webkit-box;
+                            -webkit-line-clamp: var(--line-clamp);
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                          }
+
+                          .read-more__checkbox {
+                            clip: rect(0 0 0 0);
+                            clip-path: inset(100%);
+                            height: 1px;
+                            overflow: hidden;
+                            position: absolute;
+                            white-space: nowrap;
+                            width: 1px;
+                          }
+
+                          .read-more__checkbox ~ .read-more__label {
+                            cursor: pointer;
+                            font-size: 0.75em;
+                            font-weight: 700;
+                            text-decoration: underline;
+                          }
+
+                          /* Don't forget focus and hover styles for accessibility! */
+
+
+                          .read-more__checkbox:hover ~ .read-more__label {
+                            text-decoration: none;
+                          }
+
+                          .read-more__checkbox ~ .read-more__label::before {
+                            content: attr(data-read-more);
+                          }
+
+                          .read-more__checkbox:checked ~ .read-more__label::before {
+                            content: attr(data-read-less);
+                          }
+
+                          .read-more__checkbox:checked ~ .read-more__text {
+                            --line-clamp: none;
+                            -webkit-line-clamp: var(--line-clamp);
+                          }
+
+                          /* End read more component styles */
+
+                    </style>
+                    <!-- End read more CSS -->
+                  </div>
+                </div>
+              </div> 
+              <!-- About END -->
+            </div>
+          </div>
+       </section>
+      <!-- SECTION 1 END -->
+
+      <!-- SECTION 2 START -->
+        <!-- founders section  -->
+          <section class="mt-5" data-aos="fade-up" data-aos-duration="2000">
+              <div class="container">
+                <div class="row text-left flex">
+                  <div class="col-12 mb-4 pb-2  aos-init aos-animate" >
+                    <h1 class="heading-text lg:text-9xl text-4xl" > FOUNDERS </h1>
+                  </div>
+                  <!-- Producer box START   -->
+                  <div class="col-lg-6  col-12 flex items-center">
+                    <div class="container px-0 border-[1px] ">
+                      <div class="Producer-Block text-white ">
+                        <div class=" text-center p-6 ">
+                          <div class="fw-700 text-xl mb-1">Producer</div>
+
+                          <h5 class="producer-title text-[27px] mb-4 " style="font-family: 'Montserrat', sans-serif;">WASIM CHISHTY</h5>
+
+                          <p class="border-b-[1px] pb-2 mb-2" align="justify" style="font-weight: 100; font-size: 18px; font-family: 'Outfit',sans-serif;">
+
+                            Wasim was born and brought up in the sound of Sufism and Qawwali. Starting his journey in
+
+                            Mumbai as a Model at various college fests, he acquired the title of Best Talent in Grasim Mr
+
+                            India. Wasim went on to work in various short films along with feature films, where his
+
+                            production journey began in the film "Udaan", working with acclaimed director, Vikramaditya
+
+                            Motwane. His later credits include his work as the line producer in the Ajmer schedule of
+
+                            Imtiaz Ali’s “Highway”. Wasim is an avid poetry enthusiast as well as a writer of poetry,
+
+                            influencing his love and style of creative writing, while also holding the strong skillset and
+
+                            core understanding of the world of production. Inspired by Rumi’s quote; 'Appear as you are,
+
+                            be as you appear,’ Wasim approaches both life and his creative work with the intention and
+
+                            practice of utmost honesty.
+
+                          </p>
+
+                          <a href="https://www.instagram.com/syed_wasim_chishty/" class="" target="_blank"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- Producer box ENDS   -->
+
+                  <!-- Founders Images box Start -->
+                  <div class="col-lg-6  col-12">
+                      <div class="container">
+                        <div class="row py-3">
+                          <div class="col-12 flex tran">
+                            <div class="w-[48%]  p-2 hover:border-[1px] overflow-hidden me-3">
+                              <img class=""  src="assets/img/1.jpg" alt="">
+                            </div>
+                            <div class="w-[48%]  p-2  hover:border-[1px] overflow-hidden">
+                              <img src="assets/img/2.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-12 mt-2 flex">
+                            <div class="w-[48%]  p-2   hover:border-[1px] overflow-hidden me-3">
+                              <img src="assets/img/3.jpg" alt="">
+                            </div>
+                            <div class="w-[48%]  p-2   hover:border-[1px] overflow-hidden">
+                              <img src="assets/img/4.jpg" alt="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <!-- Founders Images box End -->
+
+                </div>  
+              </div>
+          </section>
+        <!-- founder section close  -->
+      <!-- SECTION 2 END -->
+
+      <!-- SECTION 3 START -->
+        <!-- para section start -->
+          <section class="mt-6" data-aos="fade-up" data-aos-duration="2000">
+            <div class="conatiner">
+              <div class="row">
+                <!-- BIG PARA 1-->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="container ps-[2.3rem]">
+                    <p class="para p-2" align="justify" >
+
+                      Our proudest and longest project at HOGA Films is documenting the journey of <a href="https://www.dhun.life/">Dhun</a> ; the
+
+                      500-acre suburban neighbourhood of Jaipur that redefines living development practices
+
+                        to provide freedom, inspiration, and resources. Today, we are thrilled to be handling
+
+                        the project’s complete communication. HOGA Films took the backstage, choreographing
+
+                          the marketing and communication campaign for the Learning Summit in Jaisalmer, brought 
+
+                          together by Roundglass in February 2020. A campaign in which 120 leaders in Education
+
+                          from around the globe came together to develop a framework for learning that promotes 
+
+                          universal well-being. In 2021, driven by a collective need for recovery post the COVID-19 
+
+                          pandemic, HOGA Films had the privilege to run the citizen airline marketing campaign, and 
+
+                          are proud to have been a part of the inspiring initiative that became a lifeline for 
+
+                          Jaisalmer's tourism industry, the "citizen-airline partnership model.” Not only did 
+
+                          this bring back airlines to Jaisalmer, but also revived the tourism industry; a ground
+
+                            breaking campaign that has become a case study today.
+                      </p>
+                  </div>
+                </div>
+                <!-- TAG LINE 1-->
+                <div class="col-lg-6 col-md-6 col-sm-12 my-sm-5  px-sm-5 flex justify-center items-center">
+                      <div class="container">
+                        <p align="center" style="color: white;  line-height: 45px; word-spacing: 5px;">
+                          <span class="csbold"> We weave </span>
+                          <span class="nmtext">narratives</span> <br>
+                          <span class="csbold">that translate the individual</span> <br>
+                          <span class="nmtext">creative prowess,</span> 
+                          <span class="csbold"> into a <br> unified approach for action.</span>
+                        </p>
+                      </div>
+                </div>
+                <!-- TAG LINE 2-->
+                <div class="col-lg-6 col-md-6 col-sm-12  flex justify-center items-center">
+                  <div class="container px-5 lg:ms-[5rem] mt-5 ">
+                    <p class="text-white lg:text-left md:text-left text-center " style="line-height: 45px;">
+                      <span class="csbold"> We stand by</span>
+                      <span class="nmtext">inclusivity;</span>
+                      <br>
+                      <span class="nmtext">embrace</span> 
+                      <span class="csbold">the storyteller within.</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- BIG PARA 2-->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="container mt-5">
+                    <p class="p-2 para" align="justify" >
+                      Our motto is born through the idea that our innate need for storytelling predates 
+                      cave paintings! Cue… the introduction to our <a href="https://hogafilms.zedsa.co/eschool.html">HOGA e-school</a>. Our goal with this 
+                      platform is to break down the barrier that filmmaking is a privilege for the reserved 
+                      few, through making it accessible to everyone through our workshops and practical based learning through exposure.
+                      HOGA Films stays dedicated to creating stories that cross boundaries and inspire change. From stitching together
+                      a narrative that nurtures the needs of the stories that exist beyond films, to creating powerful campaigns,
+                      our commitment to storytelling continues to drive us forward.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <!-- para section close -->
+      <!-- SECTION 3 END  -->
+ 
+      <!-- SECTION 4 START  -->  
+        <!-- Proud section start  -->
+          <section class="mt-6" data-aos="fade-up" data-aos-duration="2000">
+              <div class="container">
+                <div class="row">
+                  <!-- PROUD LINE -->
+                  <div class="col-md-6 col-lg-6 col-sm-12">
+                    <div class="container">
+                      <div class="text-center" style="color: #3c3c3c;font-family:'Montserrat',sans-serif">
+                          <span class="lg:text-9xl text-7xl font-extrabold"> PROUD </span>
+                          <br>
+                          <span class="lg:text-8xl text-6xl font-extrabold"> TO HAVE </span>
+                          <br>
+                          <span class="lg:text-7xl text-5xl font-extrabold"> WORKED WITH </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- CLIENT VIDEO -->
+                  <div class="col-md-6 col-lg-6 col-sm-12">
+                    <div class="container p-5 lg:mt-0 md:mt-52">
+                      <video autoplay muted loop playsinline src="/video/logo.mp4"></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+        <!-- Proud section close  -->
+      <!-- SECTION 4 END  -->
+
+
+
+    <!-- FOOTER START  -->
+      <footer>
+      <div class="row mb-24 pb-5">
+          <!-- MOVING SABHOGA -->
+          <div class="col-sm-12 col-6">
+              <div class="container absolute">
+                  <span class="  recipe_if mt-0 ms-[1rem] lg:ms-[7rem]">
+                      #
+                  </span>
+                  <div class="slottt-machine-recipe ms-[3rem] lg:ms-[9rem] ">
+                      <div class="slottt-machine-recipe__mask" id="wordbox">
+                          <div class="slottt-machine-recipe__items_container recipe_if">
+                          
+                          </div>
+                      </div>
+                  </div>
+                  <div class="   text-white text-3xl ms-[3rem]  font-bold lg:ms-[9rem]">
+                      Connect
+                  </div>
+              </div>  
+          </div>
+          <!-- ICONS MUMBAI JAIPUR   -->
+          <div class="col-sm-12 col-6">
+           
+                <div class="text-white lg:pt-6 pt-12 absolute lg:end-44 end-6 " >
+                  <ul>
+                    <li><i class="bi bi-geo-alt"></i> <a href="#">Jaipur</a></li>
+                    <li><i class="bi bi-geo-alt"></i> <a href="#">Mumbai</a></li>
+                  </ul>
+                </div>
+          </div>
+      </div>
+      <!-- MOVING SABHOGA CSS -->
+      <style>
+          .slottt-machine-recipe {
+
+                width: 300px;
+                margin-top: -4.5rem;
+                }
+
+                .slottt-machine-recipe__mask {
+                  width: 100%;
+                  height: 60px;
+                  overflow: hidden; 
+                  position: relative;
+                  display: inline-block;
+                  margin-bottom: -10px;
+                }
+
+                .slottt-machine-recipe__items_container {
+                  position: absolute;
+                }
+
+                .slottt-machine-recipe__item {
+                  min-height: 150px;
+                  max-height: 150px;
+                  margin: 0px;
+                  padding: 0px;
+                  background-size: contain;
+                }
+
+                /* Typography */
+
+
+                .recipe_if, .recipe_then {
+                  font-weight: bold;
+                  color:rgb(234,139,0);
+                  font-size: 3rem;
+                  font-family: Helvetica, Arial, sans serif;
+
+                }
+
+                .tagline {
+                font-weight: normal;
+                font-size: 24px;
+                }
+
+                
+      </style>
+      </footer>
+    <!-- FOOTER CLOSE  -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
