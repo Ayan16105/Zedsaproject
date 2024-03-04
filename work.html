@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogafilms - Sabhoga</title>
+
+	<link rel="icon" type="image/x-icon" href="HOGA - H icon.png">
+
+  <!-- css file -->
+  <link rel="stylesheet" href="css/about.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- icon css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!-- google font Montserrat  -->
+  <link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;300;400;500;600;700;800&display=swap"
+  rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+</head>
+<body class="bg-black " style="overflow-x: hidden; max-width: 100%;">
+    <!-- Navbar Start -->
+    <nav>
+        <div class="container-fluid text-white" id="h_hgt">
+          <div class="row">
+            <div class="col-sm-6 col-md-10 text-left mbhide" id="navp">
+              <div class="text-left" id="mbhide">
+                <ul id="ul" class="m-0">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="hogatv.html">HOGA tv</a></li>
+                  <li><a href="hoga_eschool.html">HOGA eschool</a></li>
+                  <li><a href="work.html">Work</a></li>
+                  <li><a href="connect.html">Connect</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2 text-right">
+
+              <!-- mobile icon  -->
+              <div class="mylinks" style="float: left;" id="icon_mob">
+                <a class="openbtn" onclick="openNav()"><i class="bi bi-list"></i></a>
+              </div>
+              <div style="float: right;">
+                <img class="logo" src="assets/img/HOGA_White.png" alt="logo" />
+              </div>
+              <div class="text-white fixed top-2 right-2 flex flex-col items-end z-50"
+                style="font-family:'Outfit', sans-serif;font-weight: 100" id="corner_cap">
+                <span class="films-title"
+                  style="font-size:15px; font-family: 'Outfit', sans-serif;font-weight: 300;position: absolute; top: 2px; margin-left: -30px; ">
+                  FILMS
+                  <span class="and-title"
+                    style="font-size:15px; font-family: 'Outfit', sans-serif;font-weight: 300;">&amp;</span>
+                </span>
+                <span class="rotate-90" style="font-size:13px; font-family: 'Outfit', sans-serif;font-weight: 300;">ART
+                  STUDIO</span>
+              </div>
+            
+              <!-- FIXED ICONS START -->
+              <div style="gap: 5px; padding: 2.5rem .2rem .2rem 2.5rem;" class="fixed bottom-0 right-0 flex flex-col items-end z-50   fill-white">
+                  <a class="link h-[1.60rem] w-[1.60rem]" target="blank" href="https://www.instagram.com/hogafilms_india/">
+                    <svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+                      <title>Instagram</title>
+                      <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
+                    </svg>
+                  </a>
+                  <a class="link h-[1.60rem] w-[1.60rem]" target="blank" href="https://www.youtube.com/@HOGAFilms">
+                    <svg fill="#fff" role="img" viewBox="0 0 38 38 " xmlns="http://www.w3.org/2000/svg">
+                      <title>YouTube</title>
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                    </svg>
+                  </a>
+                  <a class="link h-[1.60rem] w-[1.60rem]" target="blank" href="https://vimeo.com/hogafilms">
+                    <svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+                      <title>Vimeo</title>
+                      <path d="M23.9765 6.4168c-.105 2.338-1.739 5.5429-4.894 9.6088-3.2679 4.247-6.0258 6.3699-8.2898 6.3699-1.409 0-2.578-1.294-3.553-3.881l-1.9179-7.1138c-.719-2.584-1.488-3.878-2.312-3.878-.179 0-.806.378-1.8809 1.132l-1.129-1.457a315.06 315.06 0 003.501-3.1279c1.579-1.368 2.765-2.085 3.5539-2.159 1.867-.18 3.016 1.1 3.407 3.838.465 2.953.789 4.789.971 5.5069.5389 2.45 1.1309 3.674 1.7759 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.8679 3.434-5.7568 6.7619-5.6368 2.4729.06 3.6279 1.664 3.4929 4.7969z"></path>
+                    </svg>
+                  </a>
+                  <a class="link h-[1.60rem] w-[1.60rem]" target="blank" href="https://wa.me/919967046885">
+                    <svg fill="#fff" role="img" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+                      <title>WhatsApp</title>
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+                    </svg>
+                  </a>
+                  <a class="link h-7 w-7" target="blank" href="https://www.linkedin.com">
+                    <svg fill="#fff" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 712">
+                      <title>Linkedin</title>
+                      <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                    </svg>
+                  </a>
+              </div>
+              <!-- FIXED ICONS END -->
+            </div>
+          </div>
+        </div>
+    
+    </nav>
+    <!-- NAVbar javascript -->
+    <script>
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "250px";
+        }
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0px";
+        }
+    </script> 
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> × </a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="hogatv.html">HOGA tv</a>
+        <a href="hoga_eschool.html">HOGA eschool</a>
+        <a href="work.html">Work</a>
+        <a href="connect.html">Connect</a>
+    </div>
+    <!-- Navbar END -->
+
+    <!-- SLIDER & HEADING START -->
+    <section>
+        <div class="container">
+            <div class="row p-5">
+                <div class="col-md-3 col-sm-12 order-lg-1 order-md-1 order-2">
+                    <div class="heading relative h-full ">
+                        <h3 class=" absolute sm:bottom-[-6.6rem] max-[500px]:top-[-4.3rem] text-[150px] max-[765px]:text-[50px] max-[600px]:mb-1 max-[600px]:p-2 font-['Montserrat'] mb-[68px] mt-1 font-extrabold  text-[#3C3C3C]">Work</h3>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-12 order-lg-2 order-md-2 order-1 ">
+                   
+                        <div class="max-w-4xl  lg:h-[465px] h-[265px] flex flex-row gap-4 overflow-x-scroll snap-x snap-mandatory scroll-smooth" id="postcards">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/1.jpg" alt="1.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/2.png" alt="2.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/3.png" alt="3.png">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/4.png" alt="4.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/5.png" alt="5.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/6.png" alt="6.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/7.png" alt="7.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/8.jpg" alt="8.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/9.jpg" alt="9.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/10.png" alt="10.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/11.png" alt="11.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/12.jpg" alt="12.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/13.jpg" alt="13.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/14.png" alt="15.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/15.jpg" alt="16.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/16.png" alt="17.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/17.png" alt="18.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/18.jpg" alt="19.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/19.png" alt="20.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/20.jpg" alt="21.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/21.png" alt="22.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/22.png" alt="23.png">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/23.png" alt="24.png">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/24.jpg" alt="25.png">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/25.jpg" alt="26.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/26.png" alt="26.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/27.png" alt="26.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/28.jpg" alt="26.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/29.jpg" alt="26.jpg">
+
+                            <img class="h-full object-contain snap-center" src="https://hogafilm.zedsa.co/image/img_podcast/30.jpg" alt="26.jpg">	
+
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SLIDER JAVASCRIPT -->
+      <script>
+        let nth_image = 0;
+        let sign = 1;
+        postcards.scrollLeft = 0;
+        setInterval(() => {
+          nth_image += sign;
+          console.log('carousel ->', nth_image, sign, postcards.scrollLeft)
+          if (nth_image === (postcards.children.length - 1) || nth_image === 0) {
+            sign *= -1;
+          }
+          postcards.scrollLeft = postcards.scrollLeft + (sign * postcards.children[nth_image].scrollWidth);
+        }, 2000);
+        gsap.timeline({
+          scrollTrigger: {
+            scrub: 1,
+            pin: false,
+            trigger: "#flyRight2",
+            start: "top bottom",
+            endTrigger: "#flyRight2",
+            end: "bottom top",
+          },
+        }).to("#flyRight2", {
+          translateX: '40vw'
+        });
+        gsap.timeline({
+          scrollTrigger: {
+            scrub: 1,
+            pin: false,
+            trigger: "#flyLeft2",
+            start: "top bottom",
+            endTrigger: "#flyLeft2",
+            end: "bottom top",
+          },
+        }).to("#flyLeft2", {
+          translateX: '-30vw'
+        });
+      </script>
+    <!-- SLIDER & HEADING END -->
+
+    <!-- Isotopes Content Start -->
+    <!-- TABS styling -->
+    <style>
+        .brand {
+          text-align: center;
+        }
+        .brand img {
+          width: 50px;
+        }
+        .p1:hover, .p2:hover {
+            opacity: .3;
+          cursor: pointer;
+        }
+        .filters h4 {
+            color: grey;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        #portfolio p {
+            color: grey;
+            font-size: 12px;
+            font-weight: 200;
+        }
+        .content {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px;
+            text-align: center;
+        }
+        .single-content img {
+            width: 290px;
+            height: 100%;
+            margin: 10px;
+        }
+        .filters {
+            width: 100%;
+            
+            text-align: center;
+        }
+        .filters ul {
+            list-style: none;
+            padding: 20px 0;
+        }
+        .filters li {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-family: 'Outfit',sans-serif;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            border: 0.5px solid #262626;  
+            border-radius: 50px;
+            letter-spacing: 1px;
+            transition: 0.5s all ease-in-out;
+        }
+        @media (max-width:600px) {
+          .filters li{
+            font-size: 14px;
+          }
+        }
+        .filters li:hover {
+            background-color: #262626;
+            color: white;
+            border:1px solid transparent;
+        }
+        .filters li.active {
+            color: white;
+            border:1px solid transparent;
+            background-color: #262626;
+        }
+        .work_groups_items {
+            margin-top: 1.5rem;
+            overflow: hidden;
+            position: relative;
+            }
+            .work_item a img {
+            object-fit: cover;
+            }
+            .work-vedio-wrapper {
+            border-radius: 9px;
+            padding: 12px;
+            height: 100%;
+            }
+            .work_item {
+            position: relative;
+            z-index: 1;
+            transform: scale(1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 25px;
+            }
+            .work_item.active {
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            transform: scale(0);
+            }
+            .work-video {
+            height: 346px;
+            }
+            .work-caption {
+            position: relative;
+            top: 13px;
+            transition: 0.5s all ease-in-out;
+            overflow: hidden;
+            padding-top: 19px;
+            text-align: left;
+            }
+            .work-vedio-wrapper:hover .work-caption {
+            top: 0;
+            }
+            .work-title {
+            color:white;
+            font-size: 21px;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+            }
+            .work-subheading-title {
+            font-weight: 100;
+            font-size: 20px;
+            color:white;
+            }
+            .work-subtitle {
+            color:white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            }
+            .hidden-text {
+            position: relative;
+            bottom: -50px;
+            opacity: 0;
+            transition: 0.5s all ease-in-out;
+            font-size: 16px;
+            color: #fff;
+            }
+            .work-vedio-wrapper:hover .hidden-text {
+            bottom: 0;
+            opacity: 1;
+            }
+    </style>
+        <!-- Work TABS -->
+        <div class="row ">
+          <div class="col-12">
+            <div class="p-5 filters filter-button-group">
+            <ul ><h4 >
+              <li class="active" data-filter="*">Show All</li>
+              <li data-filter=".music_video">Music Videos</li>
+              <li data-filter=".advertisement">Advertisement</li>
+              <li data-filter=".brand_films">Brand Films</li>
+              <li data-filter=".documentary">Documentaries</li>         
+              <li data-filter=".travel_films">Travel Films</li>
+              <li data-filter=".marketing_champaigns">Marketing Campaigns</li>
+              <li data-filter=".event_films">Event Films</li>
+              <li data-filter=".animation_films">Animation Films</li>
+              <li data-filter=".podcast_series">Podcast Series</li>
+              <li data-filter=".short_films">Short Films</li>
+              <li data-filter=".film_series_promo">Film/Series</li>
+            </h4></ul>
+            <hr class="w-full h-1 bg-white content-center">
+            </div>
+          </div>  
+        </div>
+        <!-- WORK CONTENT  -->
+        <div class=" row content work ">
+              <div class="work_item  brand_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/0ZPW5KbEm3M?autoplay=1&mute=1&loop=1&playlist=0ZPW5KbEm3M"
+                                            title="Jaipur Rugs - Namaz"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Jaipur Rugs -
+                            <span class="work-subheading-title"> Namaz</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">BRAND FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+        
+              <div class="work_item film_series_promo col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/RXkgxEJaHg8?autoplay=1&mute=1&loop=1&playlist=RXkgxEJaHg8"
+                                            title="Ishq Express - Official Trailer"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Ishq Express -
+                            <span class="work-subheading-title"> Official Trailer</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">FILM/SERIES PROMO</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+        
+              <div class="work_item advertisement  col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/3Y5_7CQu28k?autoplay=1&mute=1&loop=1&playlist=3Y5_7CQu28k"
+                                            title="All New Tigor The Sedan For The Stars Diwali"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">TATA Tigor -
+                            <span class="work-subheading-title"> Diwali Film</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">ADVERTISEMENT</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div> 
+              
+              <div class="work_item  music_video col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/rmDeR6-5SIA?autoplay=1&mute=1&loop=1&playlist=rmDeR6-5SIA"
+                                            title="Bewajah Music Video"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Bewajah -
+                            <span class="work-subheading-title">Anirudh Ravichander ft Irene (India’s First Vertical Video)</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MUSIC VIDEO</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/339MAhAWtHw?autoplay=1&mute=1&loop=1&playlist=339MAhAWtHw"
+                                            title="अटल अटूट Film"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">अटल अटूट Film
+                            
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item  marketing_champaigns col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/Rkd3J2lU9m0?autoplay=1&mute=1&loop=1&playlist=Rkd3J2lU9m0"
+                                            title="JDR 2021 - GF Problem Desert Festival"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">JDR 2021 -
+                            <span class="work-subheading-title"> GF Problem Desert Festival</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MARKETING CAMPAIGN</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+              
+              <div class="work_item  event_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/XFQpZlB9Ffs?autoplay=1&mute=1&loop=1&playlist=XFQpZlB9Ffs"
+                                            title="INK Talks 2019"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">INK Talks 2019
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">EVENT FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/e3MukY65WA4?autoplay=1&mute=1&loop=1&playlist=e3MukY65WA4"
+                                            title="Dhun, Jaipur"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Dhun, Jaipur                        
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item  advertisement col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/jUWTEa74v8Q?autoplay=1&mute=1&loop=1&playlist=jUWTEa74v8Q"
+                                            title="Sumadhura x MS Dhoni"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Sumadhura -
+                            <span class="work-subheading-title"> MS Dhoni </span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">ADVERTISEMENT</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item  animation_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/jdTjwhZyrzg?autoplay=1&mute=1&loop=1&playlist=jdTjwhZyrzg"
+                                            title="Ad Campaign for America the Great Magazine"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                        <div class="work-caption">
+                        <h2 class="work-title">Ad Campaign for America the Great Magazine
+                           
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">ANIMATION FILM</div>
+                        </div>
+                        </div>
+                </div>
+
+              </div>
+             
+
+              <div class="work_item  film_series_promo col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/VFCb1F7Xpkg?autoplay=1&mute=1&loop=1&playlist=VFCb1F7Xpkg"
+                                            title="Life - Summer of 2020 || Official Promo"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Life  -
+                            <span class="work-subheading-title">Summer of 2020 || Official Promo</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">FILM/SERIES PROMO</div>
+                          </div>
+                        </div>
+                </div>
+
+              </div>
+              
+
+              <div class="work_item  travel_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/EeF5wVn5qO0?autoplay=1&mute=1&loop=1&playlist=EeF5wVn5qO0"
+                                            title="Kuchaman"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Kuchaman
+  
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">TRAVEL FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item music_video col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/Rkd3J2lU9m0?autoplay=1&mute=1&loop=1&playlist=Rkd3J2lU9m0"
+                                            title="The Great Indian Train"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">The Great Indian Train -
+                            <span class="work-subheading-title"> Shillong Chamber Choir</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MUSIC VIDEO</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item  music_video col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/kRt2mFUmx9c?autoplay=1&mute=1&loop=1&playlist=kRt2mFUmx9c"
+                                            title="Rangderi Live Music Video - Maati Baani"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Rangderi (Live) -
+                            <span class="work-subheading-title"> Maati Baani</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MUSIC VIDEO</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item music_video col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/VRUVMoaXV64?autoplay=1&mute=1&loop=1&playlist=VRUVMoaXV64"
+                                            title="Rangderi Maati Baani Video Song"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Sabun Dil -
+                            <span class="work-subheading-title"> Osho Jain x Dhun Jaipur </span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MUSIC VIDEO</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item  music_video col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/gq3NZh27Cq8?autoplay=1&mute=1&loop=1&playlist=gq3NZh27Cq8"
+                                            title="Maarag Maati Baani ft Salim Khan  Live Music Video"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Maarag Maati Baani ft Salim Khan (Live) - 
+                            <span class="work-subheading-title"> The Culture Lab Dhun Jaipur</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MUSIC VIDEO</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item  advertisement col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/wKOlUZqoOvg?autoplay=1&mute=1&loop=1&playlist=wKOlUZqoOvg"
+                                            title="Uncaged Launch Film"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Uncaged - 
+                            <span class="work-subheading-title"> Launch Film</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">ADVERTISEMENT</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="work_item  advertisement col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/UuIkjaDLIZ4?autoplay=1&mute=1&loop=1&playlist=UuIkjaDLIZ4"
+                                            title="All New Tigor The Sedan For The Stars Diwali"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Sumadhura - 
+                            <span class="work-subheading-title">MS Dhoni  </span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">ADVERTISEMENT</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+              <!-- ******BRAND_FILMS******* -->
+
+               <div class="work_item  brand_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/nI2_eyMZZNQ?autoplay=1&mute=1&loop=1&playlist=nI2_eyMZZNQ"
+                                            title="Sawan Ka Lehriya"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Jaipur Rugs -
+                            <span class="work-subheading-title">Sawan Ka Lehriya</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">BRAND FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+
+              <div class="work_item  brand_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/0122hhlBJ9E?autoplay=1&mute=1&loop=1&playlist=0122hhlBJ9E"
+                                            title="Founder's Film"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Jaipur Rugs -
+                            <span class="work-subheading-title"> Founder's Film</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">BRAND FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+             
+
+              <div class="work_item  brand_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/hbk4m_eI2eE?autoplay=1&mute=1&loop=1&playlist=hbk4m_eI2eE"
+                                            title="ORIENTIQUE Brand Film"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">ORIENTIQUE - 
+                            <span class="work-subheading-title"> Brand Film</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">BRAND FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+               <!-- ******Documentary******* -->
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/jHoVEUyGcxw?si=MM0Cm4WRzf9JVwLl"
+                                            title="Feast of the Thar"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Feast of the Thar -
+                            <span class="work-subheading-title"> Featured in Incredible India</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/eFP1G-96tPs?autoplay=1&mute=1&loop=1&playlist=eFP1G-96tPs"
+                                            title="The land of Dhun"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">The land of Dhun </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/JNXbNFsgYFs?autoplay=1&mute=1&loop=1&playlist=JNXbNFsgYFs"
+                                            title="Dhun Culture Lab Pilot with Asian Heritage Foundation"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Dhun Culture Lab Pilot with Asian Heritage Foundation </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/vBoQ9QLWGjk?autoplay=1&mute=1&loop=1&playlist=vBoQ9QLWGjk"
+                                            title="Seasons of Dhun"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Seasons of Dhun</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/3iQj9F2S3G0?autoplay=1&mute=1&loop=1&playlist=3iQj9F2S3G0"
+                                            title="Dhun Haveli Documentation"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Dhun Haveli Documentation</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://youtu.be/nYJB-Mlp2mk"
+                                            title="Dhun First Residents"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Dhun First Residents </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/eZ-FvhPXt0k?autoplay=1&mute=1&loop=1&playlist=eZ-FvhPXt0k"
+                                            title="Hosla"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Hosla</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/qUcX851eFDs?autoplay=1&mute=1&loop=1&playlist=qUcX851eFDs"
+                                            title="Kiran"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Kiran</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/UC24iuZftnw?autoplay=1&mute=1&loop=1&playlist=UC24iuZftnw"
+                                            title="Pahal"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Pahal</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/WDpyGOYwDls?autoplay=1&mute=1&loop=1&playlist=WDpyGOYwDls"
+                                            title="Udaan"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Udaan</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/nlAEiOU2RKw?autoplay=1&mute=1&loop=1&playlist=nlAEiOU2RKw"
+                                            title="Planned Family"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Planned Family</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/aF5FO5cmAcc?autoplay=1&mute=1&loop=1&playlist=aF5FO5cmAcc"
+                                            title="Child Marriage"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Child Marriage</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  documentary col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/aY5hizL3CNQ?autoplay=1&mute=1&loop=1&playlist=aY5hizL3CNQ"
+                                            title="AJRAK II अजरक II"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">AJRAK II अजरक II</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">DOCUMENTARY</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               
+               <!-- ******travel_films******* -->
+
+
+               <div class="work_item  travel_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/VaGbiI_aW04?autoplay=1&mute=1&loop=1&playlist=VaGbiI_aW04"
+                                            title="Muharram in Ajmer Sharif"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Muharram in Ajmer Sharif</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">TRAVEL FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+
+               <div class="work_item  travel_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/pJ0D6eb3pcA?autoplay=1&mute=1&loop=1&playlist=pJ0D6eb3pcA"
+                                            title="Portrait of Colours"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Portrait of Colours</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">TRAVEL FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+
+               <div class="work_item  travel_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/-d1NTcPCF1A?autoplay=1&mute=1&loop=1&playlist=-d1NTcPCF1A"
+                                            title="Shadow of Southern India"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Shadow of Southern India</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">TRAVEL FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+               <div class="work_item  travel_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/d1VS0MdB7So?autoplay=1&mute=1&loop=1&playlist=d1VS0MdB7So"
+                                            title="Journey Within"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Journey Within</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">TRAVEL FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+                <!-- ******Marketing Campaigns******* -->               
+
+               <div class="work_item  marketing_champaigns col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/k-EnhjCkzpw?autoplay=1&mute=1&loop=1&playlist=k-EnhjCkzpw"
+                                            title="JDR 2021 - Promo"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">JDR 2021 -
+                            <span class="work-subheading-title"> Promo</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MARKETING CAMPAIGN</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+               <div class="work_item  marketing_champaigns col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/y71Jo1bn3lY?autoplay=1&mute=1&loop=1&playlist=y71Jo1bn3lY"
+                                            title="JDR 2021 - Puppet Film Desert Festival"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">JDR 2021 -
+                            <span class="work-subheading-title"> Puppet Film Desert Festival</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MARKETING CAMPAIGN</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+               <div class="work_item  marketing_champaigns col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/RCbLuKEmF8g?autoplay=1&mute=1&loop=1&playlist=RCbLuKEmF8g"
+                                            title="JDR 2021 - IG Profile Desert Festival"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">JDR 2021 -
+                            <span class="work-subheading-title"> IG Profile Desert Festival</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MARKETING CAMPAIGN</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+               <div class="work_item  marketing_champaigns col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/qX60BigWwVk?autoplay=1&mute=1&loop=1&playlist=qX60BigWwVk"
+                                            title="JDR 2021 - Local Food Experience"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">JDR 2021 -
+                            <span class="work-subheading-title"> Local Food Experience</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MARKETING CAMPAIGN</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+               <div class="work_item  marketing_champaigns col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/d6R_Boz7gzc?autoplay=1&mute=1&loop=1&playlist=d6R_Boz7gzc"
+                                            title="JDR 2021 - Food and Heritage"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">JDR 2021 -
+                            <span class="work-subheading-title"> Food and Heritage</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">MARKETING CAMPAIGN</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+
+               <!-- ******EVENT FILM******* -->               
+
+               <div class="work_item  event_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/Cuva0i2kKew?autoplay=1&mute=1&loop=1&playlist=Cuva0i2kKew"
+                                            title="Learning Summit Round Glass"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Learning Summit Round Glass</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">EVENT FILM</div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+
+               <!-- ****** Animation Films ******* -->
+               
+               <div class="work_item  animation_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/KNn4wafUxC4?autoplay=1&mute=1&loop=1&playlist=KNn4wafUxC4"
+                                            title="QTS Global"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                        <div class="work-caption">
+                        <h2 class="work-title">QTS Global</h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">ANIMATION FILM</div>
+                        </div>
+                        </div>
+                </div>
+
+               </div>
+
+               <!-- ****** Podcast Series ******* -->
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/l8qc8_92Bmo?si=9RCK-woQog3vm7EV"
+                                            title="Elevate - Promo| Season 01"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Elevate - 
+                            <span class="work-subheading-title">Promo| Season 01</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+
+                </div>
+               </div>
+               <!-- SEASON 1 -->
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper sm:mt-[2rem]">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098101">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img class="h-full" src="https://hogafilm.zedsa.co/image/pod_Episode_img/s1 teaser1.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Elevate - </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000503342484">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E1.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 1 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098104">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E2.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 2 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098102">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E3.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 3 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098103">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E4.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 4 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098098">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E5.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 5 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098096">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E6.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 6 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098097">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E7.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 7 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098105">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E8.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 8 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098100">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E9.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 9 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098317">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E10.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 10 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098106">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E11.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 11 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item  podcast_series col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                    <a href="https://podcasts.apple.com/in/podcast/elevate-podcast/id1546287835?i=1000504098099">
+                    <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                        <div
+                            class="pgi-image-inner anim-zoomin inner-work-video">
+                                <figure class="pgi-image work-figure">
+                                            <img src="https://hogafilm.zedsa.co/image/pod_Episode_img/S1E12.webp" alt="">
+                                </figure>
+                        </div>
+                    </div>
+                </a>
+                    <div class="work-caption">
+                        <h2 class="work-title">Episode 12 </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">PODCAST SERIES</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <!-- ************* SHORT FLIM ************* -->
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/D4_t9LIw-UU?autoplay=1&mute=1&loop=1&playlist=D4_t9LIw-UU"
+                                            title="64 Days 22 Hrs- By Arif Ali"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">64 Days 22 Hrs - 
+                            <span class="work-subheading-title"> By Arif Ali</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/mHPGNO3DVR8?autoplay=1&mute=1&loop=1&playlist=mHPGNO3DVR8"
+                                            title="Bingo- By Ashwin V "
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Bingo - 
+                            <span class="work-subheading-title"> By Ashwin V </span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/5g0NYCCcDUI?autoplay=1&mute=1&loop=1&playlist=5g0NYCCcDUI"
+                                            title="Lag Jaa Gale- By Gautam Parvi "
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Lag Jaa Gale -
+                            <span class="work-subheading-title"> By Gautam Parvi </span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/mnGCYoFLjIs?autoplay=1&mute=1&loop=1&playlist=mnGCYoFLjIs"
+                                            title="Missed Call-  By Jasmin A Singh "
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Missed Call -
+                            <span class="work-subheading-title"> By Jasmin A Singh</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/__-nuuiMiR4?autoplay=1&mute=1&loop=1&playlist=__-nuuiMiR4"
+                                            title="The Closure- By Anand Iyer"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">The Closure -
+                            <span class="work-subheading-title"> By Anand Iyer</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/3kUgDleEWug?autoplay=1&mute=1&loop=1&playlist=3kUgDleEWug"
+                                            title="First world problems- By Yatharth Awasthi"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">First world problems - 
+                            <span class="work-subheading-title"> By Yatharth Awasthi</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/7fQFuxtHdVg?autoplay=1&mute=1&loop=1&playlist=7fQFuxtHdVg"
+                                            title="Overload- By Fatir Ansari"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Overload - 
+                            <span class="work-subheading-title">By Fatir Ansari</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/tswMIMBaprs?autoplay=1&mute=1&loop=1&playlist=tswMIMBaprs"
+                                            title="Sounds of Silence- By Himanshi Handa"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Sounds of Silence -
+                            <span class="work-subheading-title">  By Himanshi Handa</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/T5Cg8jjagb0?autoplay=1&mute=1&loop=1&playlist=T5Cg8jjagb0"
+                                            title=" See you on the other side- By Roy Dipankar"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title"> See you on the other side - 
+                            <span class="work-subheading-title"> By Roy Dipankar</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/QalQ_m_ZkwM?autoplay=1&mute=1&loop=1&playlist=QalQ_m_ZkwM"
+                                            title="Full Stop- By Cynthia Roli Gupta"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Full Stop -
+                            <span class="work-subheading-title"> By Cynthia Roli Gupta</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/wkZLuyxFAHc?autoplay=1&mute=1&loop=1&playlist=wkZLuyxFAHc"
+                                            title="Hello Honey- By Sourya Deb"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Hello Honey -
+                            <span class="work-subheading-title">  By Sourya Deb</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/zQUCQsEAfkU?autoplay=1&mute=1&loop=1&playlist=zQUCQsEAfkU"
+                                            title="Doori- By Terence-Hari Fernandes"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Doori - 
+                            <span class="work-subheading-title"> By Terence-Hari Fernandes</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/7_ipmIxqhNU?autoplay=1&mute=1&loop=1&playlist=7_ipmIxqhNU"
+                                            title="Firaaq- By Amberee Pitamber"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Firaaq - 
+                            <span class="work-subheading-title"> By Amberee Pitamber</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/HMLgag0f2rU?autoplay=1&mute=1&loop=1&playlist=HMLgag0f2rU"
+                                            title="Desafio- By Sayak Bhattacharya"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Desafio - 
+                            <span class="work-subheading-title">By Sayak Bhattacharya</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/AX3TbHCKGtM?autoplay=1&mute=1&loop=1&playlist=AX3TbHCKGtM"
+                                            title="Bechari Chidiya- By Ida Ali"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Bechari Chidiya - 
+                            <span class="work-subheading-title">  By Ida Ali</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/3V0pLnDgrWc?autoplay=1&mute=1&loop=1&playlist=3V0pLnDgrWc"
+                                            title="A greeny tale- By Aakar Kaushik"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">A greeny tale - 
+                            <span class="work-subheading-title">By Aakar Kaushik</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="work_item short_films col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/fZrphYwvdrA?autoplay=1&mute=1&loop=1&playlist=fZrphYwvdrA"
+                                            title="Coma- By Yash Bandi"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Coma - 
+                            <span class="work-subheading-title"> By Yash Bandi</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">SHORT FLIM</div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <!-- ************* Film/ Series Promo  ************* -->
+
+               <div class="work_item  film_series_promo col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/XY8Hj5TWRMk?autoplay=1&mute=1&loop=1&playlist=XY8Hj5TWRMk"
+                                            title="Love In The Time Of Corona | Trailer"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Love In The Time Of Corona - 
+                            <span class="work-subheading-title">Trailer</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">FILM/SERIES PROMO</div>
+                          </div>
+                        </div>
+                </div>
+              </div>
+
+              <div class="work_item  film_series_promo col-lg-6 col-md-6">
+                <div class="work-vedio-wrapper">
+                        <div class="pgi-image-holder cover-opacity-2 work-wrap">
+                            <div class="pgi-image-inner anim-zoomin inner-work-video">
+                                    <figure class="pgi-image work-figure">
+                                        <iframe class="work-video w-100"
+                                            src="https://www.youtube.com/embed/WdD0q2adBWs&t?autoplay=1&mute=1&loop=1&playlist=WdD0q2adBWs&t"
+                                            title="Uljhe Hue - Official Trailer"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </figure>
+                            </div>
+                        </div>
+                    <div class="work-caption">
+                        <h2 class="work-title">Uljhe Hue - 
+                            <span class="work-subheading-title">Official Trailer</span>
+                        </h2>
+                        <div class="hidden-text">
+                            <div class="work-subtitle">FILM/SERIES PROMO</div>
+                          </div>
+                        </div>
+                </div>
+              </div>              
+        </div>
+  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script>
+                 $(document).ready( function() {   
+        
+                  $('.grid').isotope({
+                    itemSelector: '.grid-item',
+                  });
+        
+                  // filter items on button click
+                  $('.filter-button-group').on( 'click', 'li', function() {
+                    var filterValue = $(this).attr('data-filter');
+                    $('.work').isotope({ filter: filterValue });
+                    $('.filter-button-group li').removeClass('active');
+                    $(this).addClass('active');
+                  });
+                      })
+        </script>
+     <!-- Isotopes Content END -->
+     <!-- FOOTER START  -->
+        <footer>
+        <div class="row mb-5 ">
+            <!-- MOVING SABHOGA -->
+            <div class="col-sm-12 col-lg-6">
+                <div class="container ">
+                    <span class="  recipe_if mt-0 ms-[1rem] lg:ms-[7rem]">
+                        #
+                    </span>
+                    <div class="slottt-machine-recipe ms-[3rem] lg:ms-[9rem] ">
+                        <div class="slottt-machine-recipe__mask" id="wordbox">
+                            <div class="slottt-machine-recipe__items_container recipe_if">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="   text-white text-3xl ms-[3rem]  font-bold lg:ms-[9rem]">
+                        Connect
+                    </div>
+                </div>  
+            </div>
+            <!-- ICONS MUMBAI JAIPUR   -->
+            <div class="col-sm-12 col-lg-6 ">
+             
+                  <div class="text-white text-xl font-semibold ms-5 pt-3 lg:pt-5 lg:text-right lg:me-[12rem] md:me-[10rem]  " >
+                    <ul>
+                      <li class="lg:me-[1.35rem]"><i class="bi bi-geo-alt"></i> <a href="#">Jaipur</a></li>
+                      <li><i class="bi bi-geo-alt"></i> <a href="#">Mumbai</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+        <!-- MOVING SABHOGA CSS -->
+        <style>
+            .slottt-machine-recipe {
+  
+                  width: 300px;
+                  margin-top: -4.5rem;
+                  }
+  
+                  .slottt-machine-recipe__mask {
+                    width: 100%;
+                    height: 60px;
+                    overflow: hidden; 
+                    position: relative;
+                    display: inline-block;
+                    margin-bottom: -10px;
+                  }
+  
+                  .slottt-machine-recipe__items_container {
+                    position: absolute;
+                  }
+  
+                  .slottt-machine-recipe__item {
+                    min-height: 150px;
+                    max-height: 150px;
+                    margin: 0px;
+                    padding: 0px;
+                    background-size: contain;
+                  }
+  
+                  /* Typography */
+  
+  
+                  .recipe_if, .recipe_then {
+                    font-weight: bold;
+                    color:rgb(234,139,0);
+                    font-size: 3rem;
+                    font-family: Helvetica, Arial, sans serif;
+  
+                  }
+  
+                  .tagline {
+                  font-weight: normal;
+                  font-size: 24px;
+                  }
+  
+                  
+        </style>
+        </footer>
+    <!-- FOOTER CLOSE  -->
+        <script src="main.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>  
+  </body>
+  </html>
